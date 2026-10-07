@@ -16,8 +16,8 @@ autoinstall:
  
   # 3. Tu usuario y contraseña
   identity:
-    hostname: mi-pc-ubuntu
-    username: miusuario
+    hostname: usuario
+    username: usuario
     password: "$6$sZTSqVE4T45aDRBk$PtYMpjB09vjH9g5qg9/DXIqv9qpNgujaGgtBFDm1bYJ4z8C.v2hdsMTuGZi4O5R2NNJanrCUiT.o76ljvCmDe0"
     
 
