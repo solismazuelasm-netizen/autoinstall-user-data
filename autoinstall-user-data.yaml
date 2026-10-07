@@ -1,21 +1,28 @@
 #cloud-config
 autoinstall:
   version: 1
-
+  # 1. Idioma y teclado
   locale: es_ES.UTF-8
-
   keyboard:
     layout: es
-
-  timezone: Europe/Madrid
-
+ 
+  # 2. Internet (se conecta automáticamente por cable)
   network:
-    version: 2
-    ethernets:
-      enp1s0:
-        dhcp4: true
-
+    network:
+      version: 2
+      ethernets:
+        eth0:
+          dhcp4: true
+ 
+  # 3. Tu usuario y contraseña
   identity:
-    username: usuario
-    hostname: usuario
+    hostname: mi-pc-ubuntu
+    username: miusuario
     password: "$6$sZTSqVE4T45aDRBk$PtYMpjB09vjH9g5qg9/DXIqv9qpNgujaGgtBFDm1bYJ4z8C.v2hdsMTuGZi4O5R2NNJanrCUiT.o76ljvCmDe0"
+    
+
+ 
+  # 4. El disco duro (usa todo el disco disponible de forma automática)
+  storage:
+    layout:
+      name: direct
